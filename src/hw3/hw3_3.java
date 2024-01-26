@@ -40,7 +40,14 @@ public class Hw3_3 {
 		System.out.println("電腦亂數產號");
 
 		for (int i = 0; i < 6; i++) {
-			System.out.print(array2[(int) (Math.random() * countNumber)] + " ");
+			int j = (int) (Math.random() * countNumber);
+			if (array2[j] == 0) {
+				i--;
+				continue;
+			} else {
+				System.out.print(array2[j] + " ");
+			}
+			array2[j] = 0;
 		}
 	}
 
