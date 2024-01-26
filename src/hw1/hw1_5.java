@@ -1,6 +1,6 @@
 package hw1;
 
-public class hw1_5 {
+public class Hw1_5 {
 
 	public static void main(String[] args) {
 		double rate = 0.02;

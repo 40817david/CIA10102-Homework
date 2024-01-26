@@ -1,6 +1,6 @@
 package hw1;
 
-public class hw1_2 {
+public class Hw1_2 {
 
 	public static void main(String[] args) {
 		int a = 200 / 12;

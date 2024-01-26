@@ -1,6 +1,6 @@
 package hw1;
 
-public class hw1_4 {
+public class Hw1_4 {
 
 	public static void main(String[] args) {
 		final double pi = 3.1415;

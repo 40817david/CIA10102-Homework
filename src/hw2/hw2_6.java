@@ -1,6 +1,6 @@
 package hw2;
 
-public class hw2_6 {
+public class Hw2_6 {
 
 	public static void main(String[] args) {
 		int i, j;

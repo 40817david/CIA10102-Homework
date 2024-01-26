@@ -1,6 +1,6 @@
 package hw2;
 
-public class hw2_5 {
+public class Hw2_5 {
 
 	public static void main(String[] args) {
 		// 4 14 24 34 40 41 42 43 44 45 46 47 48 49
