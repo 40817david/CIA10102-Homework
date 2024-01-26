@@ -35,7 +35,7 @@ public class Hw3_3 {
 		return array1;
 	}
 
-	public void printArray(int[] array2) {
+	public void printRandom(int[] array2) {
 
 		System.out.println("電腦亂數產號");
 
@@ -50,11 +50,11 @@ public class Hw3_3 {
 		System.out.println("請輸入你討厭哪個數字....\n請輸入數字1~9");
 		int input = scanner.nextInt();
 
-		Hw3_3 xx = new Hw3_3();
+		Hw3_3 object = new Hw3_3();
 
-		xx.numberPool(input);
-		int[] arrayX = xx.setArray(input);
-		xx.printArray(arrayX);
+		object.numberPool(input);
+		int[] arrayX = object.setArray(input);
+		object.printRandom(arrayX);
 
 	}
 }
