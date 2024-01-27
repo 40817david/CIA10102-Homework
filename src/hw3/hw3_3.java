@@ -6,6 +6,8 @@ public class Hw3_3 {
 
 	int countNumber = 0;
 
+	// 印出喜歡的數字
+
 	public void numberPool(int number) {
 
 		for (int i = 1; i <= 49; i++) {
@@ -17,9 +19,11 @@ public class Hw3_3 {
 			}
 		}
 		System.out.println();
-		System.out.print("共有以上" + countNumber + "個數字可以選");
+		System.out.println("共有以上" + countNumber + "個數字可以選");
 
 	}
+
+	// 將喜歡的數字放進陣列
 
 	public int[] setArray(int number) {
 		int[] array1 = new int[countNumber];
@@ -34,6 +38,10 @@ public class Hw3_3 {
 		}
 		return array1;
 	}
+
+	// 於陣列中隨機選出6個數字
+
+	// 不重複機制:將選過的數字設為0,若下次選到的數字為0就重選
 
 	public void printRandom(int[] array2) {
 
@@ -59,9 +67,17 @@ public class Hw3_3 {
 
 		Hw3_3 object = new Hw3_3();
 
+		// 範圍外數字判定
+		while (input < 1 || input > 9) {
+			System.out.println("不要亂打!請輸入範圍內之數字!(1~9)");
+			input = scanner.nextInt();
+		}
+
 		object.numberPool(input);
 		int[] arrayX = object.setArray(input);
 		object.printRandom(arrayX);
+
+		scanner.close();
 
 	}
 }
