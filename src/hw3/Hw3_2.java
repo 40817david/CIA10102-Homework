@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Hw3_2 {
 	public static void main(String[] agrs) {
 		// 輸入設定
-		Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("開始猜數字吧!，提示:1-100");
 
 		// 亂數設定
@@ -16,7 +16,7 @@ public class Hw3_2 {
 
 		// 迴圈設定
 		while (true) {
-			int guess = scanner.nextInt();
+			int guess = sc.nextInt();
 			count++;
 
 			if (guess == answer) {
@@ -38,7 +38,7 @@ public class Hw3_2 {
 			}
 
 		}
-		scanner.close();
+		sc.close();
 
 	}
 }

@@ -61,23 +61,23 @@ public class Hw3_3 {
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("請輸入你討厭哪個數字....\n請輸入數字1~9");
-		int input = scanner.nextInt();
+		int input = sc.nextInt();
 
-		Hw3_3 object = new Hw3_3();
+		Hw3_3 obj = new Hw3_3();
 
 		// 範圍外數字判定
 		while (input < 1 || input > 9) {
 			System.out.println("不要亂打!請輸入範圍內之數字!(1~9)");
-			input = scanner.nextInt();
+			input = sc.nextInt();
 		}
 
-		object.numberPool(input);
-		int[] arrayX = object.setArray(input);
-		object.printRandom(arrayX);
+		obj.numberPool(input);
+		int[] arrayX = obj.setArray(input);
+		obj.printRandom(arrayX);
 
-		scanner.close();
+		sc.close();
 
 	}
 }

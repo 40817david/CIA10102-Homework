@@ -6,13 +6,13 @@ import java.util.Scanner;
 public class Hw3_1 {
 	public static void main(String args[]) {
 		// 輸入文字
-		Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("請輸入三個整數:");
 
 		// 將輸入文字放入陣列
 		int[] x = new int[3];
 		for (int i = 0; i < 3; i++) {
-			x[i] = scanner.nextInt();
+			x[i] = sc.nextInt();
 		}
 
 		// 將陣列元素做排序
@@ -32,6 +32,6 @@ public class Hw3_1 {
 			System.out.println("其他三角形");
 		}
 		
-		scanner.close();
+		sc.close();
 	}
 }
