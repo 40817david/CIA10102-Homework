@@ -1,11 +1,16 @@
 package hw4;
 
+import java.util.Scanner;
+
 public class Hw4_2_2 {
 
 	public static void main(String[] args) {
-		StringBuilder str = new StringBuilder("Hello World");
-
-		System.out.println(str.reverse());
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		StringBuilder sb = new StringBuilder(str);
+		
+		System.out.println(sb.reverse());
+		
+		sc.close();
 	}
-
 }

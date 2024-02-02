@@ -1,9 +1,13 @@
 package hw4;
 
+import java.util.Scanner;
+
 public class Hw4_2_1 {
 
 	public static void main(String[] args) {
-		String str1 = "Hello World";
+		Scanner sc = new Scanner(System.in);
+		String str1 = sc.nextLine();
+		
 		char[] reverse = new char[str1.length()];
 		int j = 0;
 
@@ -14,6 +18,8 @@ public class Hw4_2_1 {
 		}
 
 		System.out.println(reverse);
+		
+		sc.close();
 	}
 
 }
