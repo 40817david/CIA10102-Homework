@@ -9,20 +9,8 @@ public class Hw4_3 {
 
 		for (int i = 0; i < str.length; i++) {
 			for (int j = 0; j < str[i].length(); j++) {
-				switch ((int) (str[i].charAt(j))) {
-				case 97:
-					count++;
-					break;
-				case 101:
-					count++;
-					break;
-				case 105:
-					count++;
-					break;
-				case 111:
-					count++;
-					break;
-				case 117:
+				switch (str[i].charAt(j)) {
+				case 'a', 'e', 'i', 'o', 'u':
 					count++;
 					break;
 				}
