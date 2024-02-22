@@ -51,7 +51,16 @@ public class Hw8_1 {
 				myList.remove(i);
 			}
 		}
-
+		
+		//迭代器、for-each無法做增刪，會出現例外
+//		Iterator it2 = myList.iterator();
+//		while(it2.hasNext()) {
+//			if(it2.next() instanceof Number) {
+//				System.out.println(it2.next());
+//			}else {
+//				myList.remove(it2.next());
+//			}
+//		}
 	}
 
 }
