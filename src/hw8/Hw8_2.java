@@ -1,8 +1,12 @@
 package hw8;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Hw8_2 {
 	 
@@ -17,7 +21,8 @@ public class Hw8_2 {
 		
 		//不重複Train物件
 		
-		Set set = new HashSet();
+		Set<Train> set = new HashSet<Train>();
+		
 		set.add(t1);
 		set.add(t2);
 		set.add(t3);
@@ -26,46 +31,85 @@ public class Hw8_2 {
 		set.add(t6);
 		set.add(t7);
 		
-		Iterator it = set.iterator();
-		while(it.hasNext()) {
-			String str = (String)(it.next());
-			System.out.println();
+		//不重複Train物件-迭代器
+		Iterator<Train> it1 = set.iterator();
+		while(it1.hasNext()) {
+			Train t = it1.next();
+			t.getInfo();
+		}
+//		
+		//不重複Train物件-for-each迴圈
+		for(Train t : set) {
+			t.getInfo();
 		}
 
+
+		
+		
+		//Train重複，由大到小排序
+		List<Train> list = new ArrayList<Train>();
+		
+		list.add(t3);
+		list.add(t5);
+		list.add(t7);
+		list.add(t6);
+		list.add(t1);
+		list.add(t4);
+		list.add(t2);
+		
+		Collections.sort(list);
+		
+		//Train重複，由大到小排序-迭代器
+		Iterator<Train> it2 = list.iterator();
+		while(it2.hasNext()) {
+			Train t = it2.next();
+			t.getInfo();
+		}
+		
+		
+		//Train重複，由大到小排序-for迴圈
+		for(int i = 0 ;i<list.size();i++) {
+			Train t = list.get(i);
+			t.getInfo();
+		}
+		
+		//Train重複，由大到小排序-for-each迴圈
+		for(Train t : list) {
+			t.getInfo();
+		}
+
+		
+		
+		
+		
+		//Train不重複，由大到小排序
+		TreeSet<Train> ts = new TreeSet<Train>();
+		
+		ts.add(t3);
+		ts.add(t5);
+		ts.add(t7);
+		ts.add(t6);
+		ts.add(t1);
+		ts.add(t4);
+		ts.add(t2);
+		
+		
+		//Train重複，由大到小排序-迭代器
+		Iterator<Train> it3 = ts.iterator();
+		while(it3.hasNext()) {
+			Train t = it3.next();
+			t.getInfo();
+		}
+		
+		//Train重複，由大到小排序-for-each迴圈
+		for(Train t : ts) {
+			t.getInfo();
+		}
+
+		
+		
 	}
 
 }
 
-class Train {
-	private int number;
-	private String type;
-	private String start;
-	private String dest;
-	private double price;
-	
-	public Train(){
-		super();
-	}
-	
-	public Train(int number, String type, String start, String dest, double price) {
-		setInfo(number, type, start, dest, price);
-	}
-	
-	public void getInfo() {
-		System.out.println("班次:" + number);
-		System.out.println("型別:" + type);
-		System.out.println("出發地:" + start);
-		System.out.println("目的地:" + dest);
-		System.out.println("票價:" + price);
-		System.out.println("==========================");
-	}
-	
-	public void setInfo(int number, String type, String start, String dest, double price) {
-		this.number = number;
-		this.type = type;
-		this.start = start;
-		this.dest = dest;
-		this.price = price;
-	}
-}
 
