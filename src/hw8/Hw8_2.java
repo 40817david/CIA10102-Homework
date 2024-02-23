@@ -37,7 +37,7 @@ public class Hw8_2 {
 			Train t = it1.next();
 			t.getInfo();
 		}
-//		
+		
 		//不重複Train物件-for-each迴圈
 		for(Train t : set) {
 			t.getInfo();
@@ -94,14 +94,14 @@ public class Hw8_2 {
 		ts.add(t2);
 		
 		
-		//Train重複，由大到小排序-迭代器
+		//Train不重複，由大到小排序-迭代器
 		Iterator<Train> it3 = ts.iterator();
 		while(it3.hasNext()) {
 			Train t = it3.next();
 			t.getInfo();
 		}
 		
-		//Train重複，由大到小排序-for-each迴圈
+		//Train不重複，由大到小排序-for-each迴圈
 		for(Train t : ts) {
 			t.getInfo();
 		}
