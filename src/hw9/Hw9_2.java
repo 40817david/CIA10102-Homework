@@ -75,5 +75,4 @@ public class Hw9_2 {
 		mom.start();
 		son.start();
 	}
-
 }
